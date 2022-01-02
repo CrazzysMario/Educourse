@@ -1,0 +1,91 @@
+html * {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.menuContainer {
+  flex: 1;
+}
+
+.keranjangContainer {
+  flex: 1;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.menuPic {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  flex: 1;
+}
+
+.menuName {
+  flex: 1;
+}
+
+.addButton {
+  flex: 1;
+}
+
+.orderedFood {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+.makananPic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cart {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  font-size: 20pt;
+}
+
+.buttonTambah {
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14pt;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #4caf50;
+}
+
+.countFood {
+  height: fit-content;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.jumlahMakanan {
+  font-size: 40px;
+  border: 1px solid black;
+  padding: 50px;
+}

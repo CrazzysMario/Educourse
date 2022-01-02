@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style2.css" />
+    <title>Pengelolaan Penumpang</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- SLOT KANAN -->
+      <div class="slotSisi">
+        <div id="0" class="slot"><p id="0"></p></div>
+        <div id="1" class="slot"><p id="1"></p></div>
+        <div id="2" class="slot"><p id="2"></p></div>
+        <div id="3" class="slot"><p id="3"></p></div>
+        <div id="4" class="slot"><p id="4"></p></div>
+        <div id="5" class="slot"><p id="5"></p></div>
+      </div>
+
+      <!-- SLOT KIRI -->
+      <div class="slotSisi">
+        <div id="6" class="slot"><p id="6"></p></div>
+        <div id="7" class="slot"><p id="7"></p></div>
+        <div id="8" class="slot"><p id="8"></p></div>
+        <div id="9" class="slot"><p id="9"></p></div>
+      </div>
+
+      <input
+        id="namaPenumpang"
+        type="text"
+        name="penumpang"
+        placeholder="Masukkan nama penumpang"
+      />
+
+      <div class="buttons">
+        <button class="buttonPenumpang button1" onclick="naikinPenumpang()">
+          Naikin Penumpang
+        </button>
+        <button class="buttonPenumpang button2" onclick="turuninPenumpang()">
+          Turunin Penumpang
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="js/script2.js"></script>
+</html>

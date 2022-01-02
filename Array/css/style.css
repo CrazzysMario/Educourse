@@ -1,0 +1,33 @@
+.button1 {
+  border: white solid 2px;
+  background-color: #4caf50;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-size: 30px;
+  font-family: system-ui;
+  margin-right: 5px;
+}
+
+.button2 {
+  border: white solid 2px;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 2px;
+  font-family: system-ui;
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.button1:hover,
+.button2 {
+  cursor: pointer;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategray;
+}

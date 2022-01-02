@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML</title>
+  </head>
+
+  <body>
+    <p>
+      Diketahui ukuran sebuah gelas yaitu dengan tinggi
+      <span id="tinggi">100</span>cm dan diameter
+      <span id="diameter">7</span>cm. Berapakah volume gelas tersebut?
+    </p>
+    <p>Jawaban = <span id="jawaban">X</span>cm</p>
+    <p id="benar"></p>
+    <img id="gambar" src="img/Sad_Face_Emoji_large.png" width="100px" />
+
+    <button type="button" onclick="munculkanJawaban()">
+      Munculkan Jawaban
+    </button>
+  </body>
+
+  <script>
+    var tinggi = parseInt(document.getElementById("tinggi").innerHTML);
+    var diameter = parseInt(document.getElementById("diameter").innerHTML);
+    var volumeSilinder = ((22 / 7) * tinggi * diameter) / 2;
+
+    function munculkanJawaban() {
+      document.getElementById("jawaban").innerHTML = volumeSilinder;
+      document.getElementById("benar").innerHTML = "Jawaban Anda Benar";
+      document.getElementById("gambar").src = "img/download.jfif";
+    }
+  </script>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container" style="margin: 0">
+      <div class="question">
+        <p>
+          Sebuah toko kue selama <span id="hari">8</span> hari dapat membuat
+          <span id="kotak">240</span> kotak kue. <br />Banyak kue yang dapat
+          dibuat oleh toko tersebut selama <span id="hari2">12</span> hari
+          adalah….
+        </p>
+      </div>
+
+      <div class="mc-container">
+        <form name="quizForm" onsubmit="return sumbmitJawaban()">
+          <div class="multiple-choice">
+            <div><input type="radio" name="q1" value="a" />160</div>
+            <div><input type="radio" name="q1" value="b" />260</div>
+          </div>
+
+          <div class="multiple-choice">
+            <div><input type="radio" name="q1" value="c" />360</div>
+            <div><input type="radio" name="q1" value="d" />460</div>
+          </div>
+          <input type="submit" />
+        </form>
+      </div>
+
+      <p>Jawaban = <span id="jawaban">X</span> kotak</p>
+      <img id="gambar" width="100px" src="img/Sad_Face_Emoji_large.png" />
+
+      <div id="selesaiQuiz" style="margin: 0">
+        <p id="selesaiQuiz"></p>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    var hari = parseInt(document.getElementById("hari").innerHTML);
+    var kotak = parseInt(document.getElementById("kotak").innerHTML);
+    var hari2 = parseInt(document.getElementById("hari2").innerHTML);
+    var volumeSlinder = (kotak / hari) * hari2;
+
+    function sumbmitJawaban() {
+      document.getElementById("jawaban").innerHTML = volumeSlinder;
+
+      var pilihanUser = document.forms["quizForm"]["q1"].value;
+      if (pilihanUser == "c") {
+        document.getElementById("selesaiQuiz").innerHTML = "Jawaban Anda Benar";
+        document.getElementById("selesaiQuiz").style.backgroundColor =
+          "yellowgreen";
+        console.log("jelek");
+        document.getElementById("gambar").src = "img/download.jfif";
+      } else {
+        document.getElementById("selesaiQuiz").innerHTML = "Jawaban Anda Salah";
+        document.getElementById("selesaiQuiz").style.backgroundColor = "orange";
+        document.getElementById("gambar").src = "img/Sad_Face_Emoji_large.png";
+      }
+      return false;
+    }
+  </script>
+</html>
