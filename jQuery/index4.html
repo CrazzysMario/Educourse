@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+        font-weight: 100;
+      }
+
+      .result {
+        display: flex;
+        width: fit-content;
+        margin: 20px auto 0 auto;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        gap: 15px;
+        border: 2px solid #4caf50;
+        padding: 20px 50px 20px 50px;
+      }
+
+      .result * {
+        margin: 0;
+        border: 2px solid #0d6efd;
+        padding: 15px;
+        transition: 0.5s;
+        border-radius: 10px;
+      }
+
+      .class1 {
+        background-color: #0d6efd;
+        color: white;
+      }
+
+      .button {
+        display: flex;
+        width: fit-content;
+        margin: 20px auto 0 auto;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        gap: 10px;
+        border: 2px solid #4caf50;
+        padding: 20px 50px 20px 50px;
+      }
+
+      .button * {
+        border: none;
+        outline: none;
+        padding: 15px;
+        border-radius: 5px;
+      }
+
+      #addClass {
+        background-color: #0d6efd;
+        color: white;
+      }
+
+      #removeClass {
+        background-color: #dc3545;
+        color: white;
+      }
+    </style>
+
+    <div class="result">
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <p>Paragraph</p>
+      <div id="div">div</div>
+    </div>
+
+    <div class="button">
+      <button id="addClass">ADD CLASS</button>
+      <button id="removeClass">REMOVE CLASS</button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $("#addClass").click(function () {
+          $("h1, h2, h3, p, #div").addClass("class1");
+        });
+
+        $("#removeClass").click(function () {
+          $("h1, h2, h3, p").removeClass("class1");
+          $("#div").removeClass("class1");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      .container * {
+        text-align: center;
+      }
+
+      .button-form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+    </style>
+
+    <div class="container">
+      <p id="test1">Words that don't mean anything</p>
+      <p>Nama: <input type="text" id="test2" value="Patrick" /></p>
+      <div class="button-form">
+        <button id="btn1">SET TEXT</button>
+        <button id="btn2">SET TEXT IN FORM</button>
+        <button id="btn3">GET TEXT IN FORM</button>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(() => {
+        $("#btn1").click(() => {
+          if ($("#test1").text() == "Words that don't mean anything") {
+            $("#test1").text("Hello World");
+          } else {
+            $("#test1").text("Words that don't mean anything");
+          }
+        });
+
+        $("#btn2").click(() => {
+          if ($("#test2").val() == "Patrick") {
+            $("#test2").val("Spongboab");
+          } else {
+            $("#test2").val("Patrick");
+          }
+        });
+
+        $("#btn3").click(() => {
+          alert($("#test2").val());
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#slide,
+#panel {
+  border: 1px solid black;
+  background-color: mediumturquoise;
+  text-align: center;
+  padding: 30px;
+  user-select: none;
+}
+
+#panel {
+  display: none;
+  border-top: none;
+  padding: 100px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#move {
+  width: 200px;
+  height: 200px;
+  background-color: mediumturquoise;
+  position: absolute;
+}

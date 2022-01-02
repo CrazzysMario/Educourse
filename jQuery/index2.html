@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style2.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="slide">Click to slide</div>
+      <div id="panel">Tadaa!!</div>
+      <button>Animation</button>
+      <div id="move"></div>
+    </div>
+
+    <script>
+      for (var i in localStorage) {
+        if (i != "visibility") {
+          localStorage.removeItem(i);
+        }
+      }
+
+      $(document).ready(function () {
+        $("#slide").click(function () {
+          if ($("#panel").css("display") == "none") {
+            $("#panel").slideDown("slow");
+            localStorage.setItem("visibility", "show");
+          } else {
+            $("#panel").slideUp("slow");
+            localStorage.setItem("visibility", "hide");
+          }
+        });
+
+        $("button").click(function () {
+          $("#move").animate({ left: "43%" }, 1000);
+        });
+
+        if (localStorage.getItem("visibility") == "show") {
+          $("#panel").show();
+        } else {
+          $("#panel").hide();
+        }
+      });
+    </script>
+  </body>
+</html>
